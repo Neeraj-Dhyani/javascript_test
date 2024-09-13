@@ -1,0 +1,614 @@
+Q.1
+(1.)Entry Control Loop:
+Ans:- The loop in which condition is checked first and than entr in a loop 
+and executed the command
+Exp:-
+    for(i=1; i<=5; i++){
+        console.log(i);
+    }
+
+(2.)Exit Control Loop:
+Ans:- The loop in which loop body executed first and than condition checked.
+This called exit Control loop
+Exp:-
+    let i = 1
+    do{
+        console.log(i);
+        i++;
+    }
+    while(i<=5);
+
+
+=================================================================================
+
+Q.2 
+for(let i=1; i<=3; i++){
+    for(let j=1; j<=3; j++){
+        if(i==j) continue;
+        console.log(i+j);
+    }
+
+}
+<---------------------------------------------------------------------->
+
+l25 let i = 1; 
+i = 2; 
+condition check 
+i<=5 condition true
+entr in the loop 
+
+l26 let j = 1;
+j = 1;
+condition check
+j<=5 condition true
+entr in the loop 
+
+l27 if i==j continue;
+i = 1
+j = 1
+condition true
+skiped
+
+j++
+j=1+1=2
+j=2
+
+l26 j = 2; 
+j<=5; condition true
+entr in the loop
+l27 if(i==j)continue;
+i = 1;
+j = 2; 
+
+condition false
+
+l28 console.log(i+j);
+i = 1 
+j= 2
+1+2=3
+= 3
+
+j++
+j = 2+1 = 3
+j = 3
+
+l26 j = 3
+j<=3;
+condition true
+entr in the loop 
+
+l27 if (i==j) continue
+i = 1
+j = 3
+ condition false
+
+l28 console.log(i+j);
+i = 1
+j = 3
+1+3 = 4
+= 4
+
+j++
+j = 3
+j = 3+1 = 4
+
+l26 i = 4;
+condition check
+i <=3; 
+condition false
+escape the loop
+
+<---------------------------------------------------------------------->
+i++ 
+i = 1+1 = 2
+i = 2
+l25 i=2
+condition check
+i<=3
+condition true
+entr loop
+
+
+l26 let j = 1;
+j = 1;
+condition check
+j<=5 condition true
+entr in the loop 
+
+l27 if i==j continue;
+i = 2
+j = 1
+condition false
+
+l28 console.log(i+j)
+i = 2
+j = 1
+1+2 = 3
+= 3
+j++
+j=1+1=2
+j=2
+
+l26 j = 2; 
+j<=5; condition true
+entr in the loop
+l27 if(i==j)continue;
+i = 2;
+j = 2; 
+
+condition true
+
+j++
+j = 2+1 = 3
+j = 3
+
+l26 j = 3
+j<=3;
+condition true
+entr in the loop 
+
+l27 if (i==j) continue
+i = 2
+j = 3
+ condition false
+
+l28 console.log(i+j);
+i = 2
+j = 3
+1+3 = 5
+= 5
+
+j++
+j = 3
+j = 3+1 = 4
+
+l26 j = 4;
+condition check
+j <=3; 
+condition false
+escape the loop
+
+<---------------------------------------------------------------------->
+
+i++ 
+i = 2+1 = 3
+i = 3
+l25 i=2
+condition check
+i<=3
+condition true
+entr loop
+
+
+l26 let j = 1;
+j = 1;
+condition check
+j<=3 condition true
+entr in the loop 
+
+l27 if i==j continue;
+i = 3
+j = 1
+condition false
+
+l28 console.log(i+j)
+i = 3
+j = 1
+3+1 = 4
+= 4
+
+j++
+j=1+1=2
+j=2
+
+l26 j = 2; 
+j<=3; condition true
+entr in the loop
+l27 if(i==j)continue;
+i = 3;
+j = 2; 
+
+condition false
+l28 console.log(i+j)
+i=3
+j=2
+3+2 = 5
+= 5
+
+j++
+j = 2+1 = 3
+j = 3
+
+l26 j = 3
+j<=3;
+condition true
+entr in the loop 
+
+l27 if (i==j) continue
+i = 3
+j = 3
+condition true
+
+skiped
+
+j++
+j = 3
+j = 3+1 = 4
+
+l26 j = 4;
+condition check
+j <=3; 
+condition false
+escape the loop
+
+<---------------------------------------------------------------------->
+i++ 
+i = 3+1 =4
+i = 4
+l25 i = 4
+condition check
+i<=3;
+condition false
+
+the ended
+
+final output
+3
+4
+3
+5
+4
+5
+=================================================================================
+Q3.
+
+     let found = false; 
+        for (let i = 1; i <= 3; i++) { 
+        for (let j = 1; j <= 3; j++) { 
+        if (i * j > 4) { 
+        found = true; break; 
+   } 
+       console.log(i, j); 
+} 
+      if (found) break; 
+}
+<---------------------------------------------------------------------->
+l265 let found = false;
+l266 let i = 1;
+condition check
+i<=3;
+condition true
+entr in the loop 
+l267 let j = 1; 
+condition check
+j<=3;
+condition true
+entr in the loop 
+if(i*j>4){
+    found break;
+}
+i
+i=1
+j=1
+1*1 = 1
+1>4 
+condition false
+l271 console.log(i,j)
+i=1 
+j=1
+= 1,1
+
+j++
+j=1+1=2
+j=2
+
+l267 let j = 2; 
+condition check
+j<=3;
+condition true
+entr in the loop 
+if(i*j>4){
+    found break;
+}
+i
+i=1
+j=2
+1*2 = 2
+2>4 
+condition false
+l271 console.log(i,j)
+i=1 
+j=2
+= 1,2
+
+j++ 
+j=2+1=3
+j=3 
+
+l267 let j = 3; 
+condition check
+j<=3;
+condition true
+entr in the loop 
+if(i*j>4){
+    found break;
+}
+i
+i=1
+j=3
+1*3 = 3
+3>4 
+condition false
+l271 console.log(i,j)
+i=1 
+j=3
+
+=1,3
+
+j++
+j=3+1=4
+j=4
+condition check
+j=4
+j<=3
+condition false
+escape the loop
+
+l272 if(found) break;
+If the variable found is true, then immediately exit the outer for loop.
+condition false
+<---------------------------------------------------------------------->
+i++
+i=1+1=2
+i=2
+
+l266 i=2
+condition check
+i=2
+i<=3
+condition true
+entr loop
+
+l267 let j = 1; 
+condition check
+j<=3;
+condition true
+entr in the loop 
+if(i*j>4){
+    found break;
+}
+i
+i=2
+j=1
+2*1 = 2
+2>4 
+condition false
+l271 console.log(i,j)
+i=2 
+j=1
+= 2,1
+
+j++
+j=1+1
+j=2
+
+l267 let j = 2; 
+condition check
+j<=3;
+condition true
+entr in the loop 
+if(i*j>4){
+    found break;
+}
+i
+i=2
+j=2
+2*2 = 4
+4>4 
+condition false
+l271 console.log(i,j)
+i=2 
+j=2
+= 2,2
+j++
+j=2+1
+j=3
+
+l267 let j = 3; 
+condition check
+j<=3;
+condition true
+entr in the loop 
+if(i*j>4){
+    found =  true break;
+}
+i
+i=2
+j=3
+2*3 = 6
+6>4 
+condition true
+found true 
+break
+escape the loop
+
+l272 if(found) break;
+found true
+the variable found is true, 
+immediately exit the loop 
+
+the final output
+1,1
+1,2
+1,3
+2,1
+2,2
+=================================================================================
+Q.4
+    let pattern = ''; 
+    for (let i = 1; i <= 5; i++) { 
+    for (let j = 1; j <= i; j++) {
+    pattern += '*';
+    } 
+    pattern += '\n';
+    }
+    console.log(pattern);
+<---------------------------------------------------------------------->
+    l448 pattern = '' ;
+    empty variable in ram
+
+    l449 let i = 1;
+    condition check
+    i<=5;
+    condition true
+    entr the loop 
+    l450 let j=1
+    condition check
+    j<=i
+    j=1 
+    i=1
+    condition true
+    l452 pattern +="*"
+    pattern = pattern+ *
+    pattern *
+    j++
+    j=1+1=2
+    j =2
+     l453 pattern +="\n"
+    = pattern="*
+    "
+    <---------------------------------------------------------------------->
+    i++
+    i=1+1=2
+    i=2
+    l449 let i = 2;
+    condition check
+    i<=5;
+    condition true
+    entr the loop 
+    l450 let j=1
+    condition check
+    j<=i
+    j=2 
+    i=2
+    condition true
+    l452 pattern +="*, **"
+    pattern = pattern+ *
+    pattern *
+    j++
+    j=2+1=2
+    j = 3
+     l453 pattern +="\n"
+    = pattern=
+    "   *
+        **
+
+    "
+    <---------------------------------------------------------------------->
+    i++
+    i=2+1=3
+    i=3
+    l449 let i = 2;
+    condition check
+    i<=5;
+    condition true
+    entr the loop 
+    l450 let j=3
+    condition check
+    j<=i
+    j=3
+    i=3
+    condition true
+    l452 pattern +="*, **, ***"
+    pattern = pattern+ *
+    pattern *
+    j++
+    j=3+1=4
+    j =4
+     l453 pattern +="\n"
+    = pattern=
+    "   *
+        **
+        ***
+
+    "
+    <---------------------------------------------------------------------->
+    i++
+    i=3+1=4
+    i=4
+    l449 let i = 4;
+    condition check
+    i<=5;
+    condition true
+    entr the loop 
+    l450 let j=4
+    condition check
+    j<=i
+    j=4
+    i=4
+    condition true
+    l452 pattern +="*, **, ***, ****"
+    pattern = pattern+ *
+    pattern *
+    j++
+    j=4+1=5
+    j =5
+     l453 pattern +="\n"
+    = pattern=
+    "   *
+        **
+        ***
+        ****
+
+    "
+    <---------------------------------------------------------------------->
+    i++
+    i=4+1=5
+    i=5
+    l449 let i = 5;
+    condition check
+    i<=5;
+    condition true
+    entr the loop 
+    l450 let j=5
+    condition check
+    j<=i
+    j=5
+    i=5
+    condition true
+    l452 pattern +="*, **, ***, ****,*****"
+    pattern = pattern+ *
+    pattern *
+    j++
+    j=5+1=6
+    j =6
+     l453 pattern +="\n"
+    = pattern =
+    "   *
+        **
+        ***
+        ****
+        *****
+    "
+    <---------------------------------------------------------------------->
+    i++
+    i=5+1=6
+    i=6
+    condition check
+    i<=5
+    i=6
+    condition false
+    exit the loop 
+    l445 console.log(pattern);
+    "   *
+        **
+        ***
+        ****
+        *****
+    "
+    final output
+        *
+        **
+        ***
+        ****
+        *****
